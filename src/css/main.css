@@ -623,3 +623,33 @@ section.hero {
   section.hero .block2 img {
     width: 100%;
     height: auto; }
+
+.partners-measure {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 0px 10px; }
+
+section.partners {
+  padding: 20px 0px;
+  background: var(--default-background-color-2); }
+  section.partners ul.partner-list {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; }
+    section.partners ul.partner-list li {
+      margin-bottom: 30px; }
+      section.partners ul.partner-list li:last-child {
+        margin-bottom: 0px; }
+    @media (min-width: 768px) {
+      section.partners ul.partner-list {
+        flex-direction: row;
+        flex-flow: wrap; }
+        section.partners ul.partner-list li {
+          margin-bottom: 0px;
+          margin-right: 20px; }
+          section.partners ul.partner-list li:last-child {
+            margin-right: 0px; } }
+    @media (min-width: 992px) {
+      section.partners ul.partner-list {
+        justify-content: space-between; } }
