@@ -494,7 +494,7 @@ button.mobile-menu-btn {
 @keyframes show-animate {
   0% {
     opacity: 0;
-    transform: translateY(30%); }
+    transform: translateY(50%); }
   100% {
     opacity: 1;
     transform: translateY(0%); } }
@@ -514,17 +514,16 @@ header {
   height: 80px;
   background: var(--default-background-color);
   border-bottom: 1px solid lime; }
-  header .logo {
-    display: flex;
-    flex-flow: row nowrap;
+  header .logo a {
+    display: inline-flex;
     justify-content: center;
     align-items: center; }
-    header .logo img {
-      margin-right: 8px;
-      background: var(--default-background-color); }
-    header .logo p {
-      font-size: 1.875em;
-      color: #fff; }
+  header .logo img {
+    margin-right: 8px;
+    background: var(--default-background-color); }
+  header .logo p {
+    font-size: 1.875em;
+    color: #fff; }
   header nav {
     margin-left: auto; }
     @media (min-width: 768px) {
@@ -536,7 +535,8 @@ header {
       position: absolute;
       top: 80px;
       left: 0px;
-      opacity: 0; }
+      opacity: 0;
+      z-index: 9999; }
       header nav ul li {
         width: 100%;
         margin-bottom: 5px;
@@ -561,3 +561,65 @@ header {
           flex-flow: row nowrap;
           justify-content: flex-start;
           align-items: center; } }
+
+.hero-measure {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 10px;
+  position: relative; }
+  .hero-measure .block1,
+  .hero-measure .block2 {
+    flex: 1; }
+  @media (min-width: 768px) {
+    .hero-measure {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-start; } }
+  @media (min-width: 992px) {
+    .hero-measure {
+      padding: 50px 0px; } }
+
+section.hero {
+  padding: 20px 0px;
+  background: var(--default-background-color); }
+  section.hero h1.hero-title {
+    font-size: 2.375em;
+    color: #fff;
+    margin-bottom: 10px; }
+    @media (min-width: 992px) {
+      section.hero h1.hero-title {
+        font-size: 4.375em;
+        margin-bottom: 20px; } }
+  section.hero p.hero-sub-title {
+    font-size: 1em;
+    color: #fff;
+    margin-bottom: 10px; }
+    @media (min-width: 992px) {
+      section.hero p.hero-sub-title {
+        font-size: 1.375em;
+        margin-bottom: 20px; } }
+  section.hero button.default-btn {
+    font-size: 1em;
+    padding: 9px 19px;
+    background: #fff;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    text-transform: capitalize; }
+    @media (min-width: 992px) {
+      section.hero button.default-btn {
+        font-size: 1.375em;
+        padding: 12px 26px; } }
+  @media (min-width: 768px) {
+    section.hero .block1 {
+      max-width: 450px;
+      padding-top: 40px; } }
+  @media (min-width: 992px) {
+    section.hero .block1 {
+      margin-right: 90px; } }
+  section.hero .block2 img {
+    width: 100%;
+    height: auto; }

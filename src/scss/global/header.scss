@@ -15,10 +15,11 @@ header {
   background: var(--default-background-color);
   border-bottom: 1px solid lime;
   .logo {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
     img {
       margin-right: 8px;
       background: var(--default-background-color);
@@ -42,6 +43,7 @@ header {
       top: 80px;
       left: 0px;
       opacity: 0;
+      z-index: 9999;
       li {
         width: 100%;
         margin-bottom: 5px;
