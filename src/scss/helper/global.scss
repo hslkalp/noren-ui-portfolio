@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  font-family: 'Lato', sans-serif;
+}
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+button.mobile-menu-btn {
+  transition: 0.5s ease all;
+  svg {
+    fill: #fff;
+  }
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.menu-show {
+  animation-name: show-animate;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-animate {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  
+}

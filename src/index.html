@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" type="text/css" />
+    <title>Noren</title>
+  </head>
+  <body>
+    <!-- * svg -->
+    <svg
+      width="0"
+      height="0"
+      display="none"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <symbol id="icon-menu" viewBox="0 0 32 32">
+          <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+        </symbol>
+      </defs>
+    </svg>
+    <header>
+      <div class="header-measure">
+        <div class="logo">
+          <a href="#">
+            <img src="./img/logo.jpeg" alt="logo" />
+          </a>
+          <p>Noren.</p>
+        </div>
+        <nav>
+          <button class="btn mobile-menu-btn" id="menu-btn">
+            <svg class="icon icon-menu">
+              <use xlink:href="#icon-menu"></use>
+            </svg>
+          </button>
+          <ul id="menu">
+            <li><a href="#">home</a></li>
+            <li><a href="#">service</a></li>
+            <li><a href="#">team</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <script src="./js/index.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+.header-measure {
+  position: relative;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 10px; // * desktop ta silinecek
+}
+
+header {
+  height: 80px;
+  background: var(--default-background-color);
+  border-bottom: 1px solid lime;
+  .logo {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    img {
+      margin-right: 8px;
+      background: var(--default-background-color);
+    }
+    p {
+      font-size: 1.875em;
+      color: #fff;
+    }
+  }
+  nav {
+    button.mobile-menu-btn {
+      @include screen('tablet') {
+        display: none;
+      }
+    }
+    margin-left: auto;
+    ul {
+      background: var(--default-background-color);
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 0px;
+      opacity: 0;
+      li {
+        width: 100%;
+        margin-bottom: 5px;
+        display: inline-flex;
+        justify-content: center;
+        a {
+          font-size: 1.125em;
+          padding: 11px 14px;
+          color: #fff;
+          text-transform: capitalize;
+        }
+        @include screen('desktop') {
+          margin-right: 40px;
+          &:last-child {
+            margin-right: 0px;
+          }
+        }
+      }
+      @include screen('tablet') {
+        opacity: 1;
+        transition: 0s;
+        position: static;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+}
