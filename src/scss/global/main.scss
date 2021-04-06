@@ -1,0 +1,16 @@
+.main-measure {
+  max-width: 1200px;
+  margin: 0px auto;
+}
+section.card-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px;
+  @include screen('tablet') {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}

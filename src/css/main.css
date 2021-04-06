@@ -464,6 +464,9 @@ td {
 * {
   font-family: 'Lato', sans-serif; }
 
+bod {
+  background: #fff; }
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -498,6 +501,36 @@ button.mobile-menu-btn {
   100% {
     opacity: 1;
     transform: translateY(0%); } }
+
+.card {
+  width: 270px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--default-background-color-2);
+  border-radius: 1em;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px; }
+  .card .card-img {
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      .card .card-img {
+        margin-bottom: 40px; } }
+  .card .card-content h3 {
+    font-size: 1.625em;
+    margin-bottom: 5px; }
+    @media (min-width: 992px) {
+      .card .card-content h3 {
+        margin-bottom: 10px; } }
+  .card .card-content p {
+    font-size: 0.875em;
+    margin-bottom: 20px;
+    line-height: 1.3em; }
+    @media (min-width: 992px) {
+      .card .card-content p {
+        margin-bottom: 40px; } }
 
 .header-measure {
   position: relative;
@@ -581,7 +614,7 @@ header {
       align-items: flex-start; } }
   @media (min-width: 992px) {
     .hero-measure {
-      padding: 50px 0px; } }
+      padding: 50px 10px; } }
 
 section.hero {
   padding: 20px 0px;
@@ -653,3 +686,19 @@ section.partners {
     @media (min-width: 992px) {
       section.partners ul.partner-list {
         justify-content: space-between; } }
+
+.main-measure {
+  max-width: 1200px;
+  margin: 0px auto; }
+
+section.card-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px; }
+  @media (min-width: 768px) {
+    section.card-info {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between; } }

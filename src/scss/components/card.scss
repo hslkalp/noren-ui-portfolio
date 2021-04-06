@@ -1,0 +1,35 @@
+.card {
+  width: 270px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--default-background-color-2);
+  border-radius: 1em;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  .card-img {
+    margin-bottom: 20px;
+    @include screen('desktop') {
+      margin-bottom: 40px;
+    }
+  }
+  .card-content {
+    h3 {
+      font-size: 1.625em;
+      margin-bottom: 5px;
+      @include screen('desktop') {
+        margin-bottom: 10px;
+      }
+    }
+    p {
+      font-size: 0.875em;
+      margin-bottom: 20px; // * 42px
+      line-height: 1.3em;
+      @include screen('desktop') {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
