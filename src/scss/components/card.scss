@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   width: 270px;
   display: flex;
   flex-flow: column nowrap;
@@ -8,7 +9,13 @@
   border-radius: 1em;
   padding: 20px;
   margin-bottom: 20px;
-  margin-right: 20px;
+  @include screen('desktop') {
+    margin-right: 20px;
+  }
+
+  &:last-child {
+    margin-bottom: 0px;
+  }
   .card-img {
     margin-bottom: 20px;
     @include screen('desktop') {

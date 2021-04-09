@@ -14,3 +14,310 @@ section.card-info {
     justify-content: space-between;
   }
 }
+
+section.job {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px; // * 40 olacak
+  margin-bottom: 20px;
+  @include screen('tablet') {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  @include screen('desktop') {
+    padding: 40px 10px;
+  }
+
+  .block1 {
+    img {
+      max-height: 450px;
+      width: 100%;
+      height: auto;
+    }
+    @include screen('desktop') {
+      margin-right: 60px;
+    }
+  }
+
+  .info-job {
+    max-width: 450px;
+    h3.info-job-title {
+      font-size: 2.25em; // * 3.75em
+      text-transform: capitalize;
+      margin-bottom: 12px;
+      @include screen('desktop') {
+        font-size: 3.75em;
+      }
+    }
+    p.job-sub-title {
+      font-size: 1.125em;
+      margin-bottom: 20px; // * 48 px olacak
+      @include screen('desktop') {
+        margin-bottom: 48px;
+        line-height: 1.5em;
+      }
+    }
+  }
+  .info-job-description {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    p.circle {
+      flex-shrink: 0;
+      margin-right: 15px;
+      background: pink;
+      padding: 15px;
+      border-radius: 50%;
+      color: #fff;
+    }
+  }
+}
+
+section.job-numbers {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  @include screen('tablet') {
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 20px;
+  }
+
+  .block2 {
+    img {
+      width: 300px;
+      height: auto;
+    }
+  }
+
+  .numbers {
+    max-width: 450px;
+    h3 {
+      font-size: 2.25em; // * 3.75em
+      text-transform: capitalize;
+      margin-bottom: 10px;
+      @include screen('desktop') {
+        font-size: 3.75em;
+        margin-bottom: 20px;
+      }
+    }
+    p {
+      font-size: 1.125em;
+      margin-bottom: 10px;
+      @include screen('desktop') {
+        margin-bottom: 40px;
+        line-height: 1.5em;
+      }
+    }
+    .btn {
+      background: var(--default-background-color);
+      margin-bottom: 10px;
+    }
+  }
+}
+
+section.blog-post {
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  h3 {
+    font-size: 2.25em;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    @include screen('desktop') {
+      margin-bottom: 40px;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    @include screen('desktop') {
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  .card {
+    width: 100%;
+    border-top-right-radius: 34px;
+    border-top-left-radius: 34px;
+    margin-bottom: 20px;
+    .card-img {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    .card-content {
+      margin-top: 180px;
+    }
+  }
+  .card-content {
+    div {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        margin-right: 30px;
+        text-transform: capitalize;
+        font-size: 0.875em;
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+    h4 {
+      font-size: 1.375em;
+      margin-bottom: 12px;
+    }
+    p {
+      font-size: 0.875em;
+      line-height: 1.3em;
+    }
+  }
+}
+
+section.employee-comment {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  @include screen('desktop') {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  .card-content {
+    h3 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+    p {
+      margin-bottom: 0px;
+      font-size: 0.875em;
+      line-height: 1.6em;
+    }
+    .info-employee {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px;
+      margin-bottom: 18px;
+      .img {
+        margin-right: 20px;
+      }
+      p.card-number {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        background: #f8f4f4;
+        padding: 6px 12px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .comment-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    @include screen('tablet') {
+      left: 30%;
+    }
+    @include screen('desktop') {
+      position: static;
+    }
+
+    button {
+      cursor: pointer;
+      margin-bottom: 10px;
+      width: 42px;
+      height: 42px;
+      border: 1px solid gray;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+}
+
+section.subscribe {
+  margin-bottom: 20px;
+  padding: 10px 10px;
+
+  .subscribe-form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 10px;
+    background: var(--default-background-color-3);
+    border-radius: 25px;
+    @include screen('mobile') {
+      padding: 50px;
+    }
+    @include screen('desktop') {
+      align-items: flex-start;
+      background: var(--default-background-color-3) url('/src/img/mailbox.svg')
+        no-repeat right 0%;
+    }
+    h3 {
+      font-size: 1.2em;
+      color: #fff;
+      margin-bottom: 30px;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+      @include screen('mobile') {
+        font-size: 2em;
+      }
+    }
+    div {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      input {
+        border: none;
+        outline: none;
+        padding: 12px 15px;
+        margin-right: 5px;
+        color: #fff;
+        background: lighten($color: #fcbc14, $amount: 10%);
+        border-radius: 30px;
+        &::placeholder {
+          color: #fff;
+        }
+        @include screen('desktop') {
+          padding: 18px 27px;
+        }
+      }
+      button.btn-subscribe {
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 30px;
+        @include screen('desktop') {
+          padding: 18px 27px;
+        }
+      }
+    }
+  }
+}

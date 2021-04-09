@@ -31,6 +31,31 @@ button.mobile-menu-btn {
   }
 }
 
+button.default-btn {
+  font-size: 1em; // * 1.375 em olacak
+  padding: 9px 19px;
+  background: #fff;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  cursor: 'pointer';
+  color: #fff;
+  @include screen('desktop') {
+    font-size: 1.375em;
+    padding: 12px 26px;
+  }
+}
+
+a.post-link {
+  flex-basis: 298px;
+  width: 298px;
+  transition: 1s all ease;
+  &:hover,
+  &:focus {
+    transform: translateY(-20px) scale(1.1);
+  }
+}
+
 .menu-show {
   animation-name: show-animate;
   animation-duration: 1s;

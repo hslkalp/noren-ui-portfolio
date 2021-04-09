@@ -488,6 +488,27 @@ button.mobile-menu-btn {
   button.mobile-menu-btn:focus {
     transform: scale(1.1); }
 
+button.default-btn {
+  font-size: 1em;
+  padding: 9px 19px;
+  background: #fff;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  cursor: 'pointer';
+  color: #fff; }
+  @media (min-width: 992px) {
+    button.default-btn {
+      font-size: 1.375em;
+      padding: 12px 26px; } }
+
+a.post-link {
+  flex-basis: 298px;
+  width: 298px;
+  transition: 1s all ease; }
+  a.post-link:hover, a.post-link:focus {
+    transform: translateY(-20px) scale(1.1); }
+
 .menu-show {
   animation-name: show-animate;
   animation-duration: 1s;
@@ -503,6 +524,7 @@ button.mobile-menu-btn {
     transform: translateY(0%); } }
 
 .card {
+  position: relative;
   width: 270px;
   display: flex;
   flex-flow: column nowrap;
@@ -511,8 +533,12 @@ button.mobile-menu-btn {
   background: var(--default-background-color-2);
   border-radius: 1em;
   padding: 20px;
-  margin-bottom: 20px;
-  margin-right: 20px; }
+  margin-bottom: 20px; }
+  @media (min-width: 992px) {
+    .card {
+      margin-right: 20px; } }
+  .card:last-child {
+    margin-bottom: 0px; }
   .card .card-img {
     margin-bottom: 20px; }
     @media (min-width: 992px) {
@@ -635,17 +661,8 @@ section.hero {
       section.hero p.hero-sub-title {
         font-size: 1.375em;
         margin-bottom: 20px; } }
-  section.hero button.default-btn {
-    font-size: 1em;
-    padding: 9px 19px;
-    background: #fff;
-    border-radius: 50px;
-    margin-bottom: 10px;
-    text-transform: capitalize; }
-    @media (min-width: 992px) {
-      section.hero button.default-btn {
-        font-size: 1.375em;
-        padding: 12px 26px; } }
+  section.hero .btn {
+    color: black; }
   @media (min-width: 768px) {
     section.hero .block1 {
       max-width: 450px;
@@ -702,3 +719,253 @@ section.card-info {
       flex-direction: row;
       flex-wrap: nowrap;
       justify-content: space-between; } }
+
+section.job {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    section.job {
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: flex-start; } }
+  @media (min-width: 992px) {
+    section.job {
+      padding: 40px 10px; } }
+  section.job .block1 img {
+    max-height: 450px;
+    width: 100%;
+    height: auto; }
+  @media (min-width: 992px) {
+    section.job .block1 {
+      margin-right: 60px; } }
+  section.job .info-job {
+    max-width: 450px; }
+    section.job .info-job h3.info-job-title {
+      font-size: 2.25em;
+      text-transform: capitalize;
+      margin-bottom: 12px; }
+      @media (min-width: 992px) {
+        section.job .info-job h3.info-job-title {
+          font-size: 3.75em; } }
+    section.job .info-job p.job-sub-title {
+      font-size: 1.125em;
+      margin-bottom: 20px; }
+      @media (min-width: 992px) {
+        section.job .info-job p.job-sub-title {
+          margin-bottom: 48px;
+          line-height: 1.5em; } }
+  section.job .info-job-description {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px; }
+    section.job .info-job-description p.circle {
+      flex-shrink: 0;
+      margin-right: 15px;
+      background: pink;
+      padding: 15px;
+      border-radius: 50%;
+      color: #fff; }
+
+section.job-numbers {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
+  margin-bottom: 20px; }
+  @media (min-width: 768px) {
+    section.job-numbers {
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 40px 20px; } }
+  section.job-numbers .block2 img {
+    width: 300px;
+    height: auto; }
+  section.job-numbers .numbers {
+    max-width: 450px; }
+    section.job-numbers .numbers h3 {
+      font-size: 2.25em;
+      text-transform: capitalize;
+      margin-bottom: 10px; }
+      @media (min-width: 992px) {
+        section.job-numbers .numbers h3 {
+          font-size: 3.75em;
+          margin-bottom: 20px; } }
+    section.job-numbers .numbers p {
+      font-size: 1.125em;
+      margin-bottom: 10px; }
+      @media (min-width: 992px) {
+        section.job-numbers .numbers p {
+          margin-bottom: 40px;
+          line-height: 1.5em; } }
+    section.job-numbers .numbers .btn {
+      background: var(--default-background-color);
+      margin-bottom: 10px; }
+
+section.blog-post {
+  padding: 10px 10px;
+  margin-bottom: 20px; }
+  section.blog-post h3 {
+    font-size: 2.25em;
+    text-transform: capitalize;
+    margin-bottom: 20px; }
+    @media (min-width: 992px) {
+      section.blog-post h3 {
+        margin-bottom: 40px; } }
+  section.blog-post .row {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; }
+    @media (min-width: 992px) {
+      section.blog-post .row {
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start; } }
+  section.blog-post .card {
+    width: 100%;
+    border-top-right-radius: 34px;
+    border-top-left-radius: 34px;
+    margin-bottom: 20px; }
+    section.blog-post .card .card-img {
+      position: absolute;
+      top: 0px;
+      left: 0px; }
+    section.blog-post .card .card-content {
+      margin-top: 180px; }
+  section.blog-post .card-content div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+    section.blog-post .card-content div p {
+      margin-right: 30px;
+      text-transform: capitalize;
+      font-size: 0.875em; }
+      section.blog-post .card-content div p svg {
+        margin-right: 5px; }
+  section.blog-post .card-content h4 {
+    font-size: 1.375em;
+    margin-bottom: 12px; }
+  section.blog-post .card-content p {
+    font-size: 0.875em;
+    line-height: 1.3em; }
+
+section.employee-comment {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px; }
+  @media (min-width: 992px) {
+    section.employee-comment {
+      flex-flow: row nowrap;
+      justify-content: space-between; } }
+  section.employee-comment .card-content h3 {
+    font-size: 2em;
+    margin-bottom: 20px; }
+    section.employee-comment .card-content h3::first-letter {
+      text-transform: uppercase; }
+  section.employee-comment .card-content p {
+    margin-bottom: 0px;
+    font-size: 0.875em;
+    line-height: 1.6em; }
+  section.employee-comment .card-content .info-employee {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 18px; }
+    section.employee-comment .card-content .info-employee .img {
+      margin-right: 20px; }
+    section.employee-comment .card-content .info-employee p.card-number {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      background: #f8f4f4;
+      padding: 6px 12px;
+      border-radius: 50%; }
+  section.employee-comment .comment-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center; }
+    @media (min-width: 768px) {
+      section.employee-comment .comment-btn {
+        left: 30%; } }
+    @media (min-width: 992px) {
+      section.employee-comment .comment-btn {
+        position: static; } }
+    section.employee-comment .comment-btn button {
+      cursor: pointer;
+      margin-bottom: 10px;
+      width: 42px;
+      height: 42px;
+      border: 1px solid gray;
+      border-radius: 50%;
+      background: #fff; }
+
+section.subscribe {
+  margin-bottom: 20px;
+  padding: 10px 10px; }
+  section.subscribe .subscribe-form {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 10px;
+    background: var(--default-background-color-3);
+    border-radius: 25px; }
+    @media (min-width: 576px) {
+      section.subscribe .subscribe-form {
+        padding: 50px; } }
+    @media (min-width: 992px) {
+      section.subscribe .subscribe-form {
+        align-items: flex-start;
+        background: var(--default-background-color-3) url("/src/img/mailbox.svg") no-repeat right 0%; } }
+    section.subscribe .subscribe-form h3 {
+      font-size: 1.2em;
+      color: #fff;
+      margin-bottom: 30px; }
+      section.subscribe .subscribe-form h3::first-letter {
+        text-transform: uppercase; }
+      @media (min-width: 576px) {
+        section.subscribe .subscribe-form h3 {
+          font-size: 2em; } }
+    section.subscribe .subscribe-form div {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center; }
+      section.subscribe .subscribe-form div input {
+        border: none;
+        outline: none;
+        padding: 12px 15px;
+        margin-right: 5px;
+        color: #fff;
+        background: #fdca46;
+        border-radius: 30px; }
+        section.subscribe .subscribe-form div input::placeholder {
+          color: #fff; }
+        @media (min-width: 992px) {
+          section.subscribe .subscribe-form div input {
+            padding: 18px 27px; } }
+      section.subscribe .subscribe-form div button.btn-subscribe {
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 30px; }
+        @media (min-width: 992px) {
+          section.subscribe .subscribe-form div button.btn-subscribe {
+            padding: 18px 27px; } }

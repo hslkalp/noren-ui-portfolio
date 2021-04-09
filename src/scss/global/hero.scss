@@ -43,18 +43,10 @@ section.hero {
       margin-bottom: 20px;
     }
   }
-  button.default-btn {
-    font-size: 1em; // * 1.375 em olacak
-    padding: 9px 19px;
-    background: #fff;
-    border-radius: 50px;
-    margin-bottom: 10px;
-    text-transform: capitalize;
-    @include screen('desktop') {
-      font-size: 1.375em;
-      padding: 12px 26px;
-    }
+  .btn {
+    color: black;
   }
+
   .block1 {
     @include screen('tablet') {
       max-width: 450px;
