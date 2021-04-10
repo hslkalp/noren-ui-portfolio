@@ -467,6 +467,19 @@ td {
 bod {
   background: #fff; }
 
+.logo a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center; }
+
+.logo img {
+  margin-right: 8px;
+  background: transparent; }
+
+.logo p {
+  font-size: 1.875em;
+  color: #fff; }
+
 .icon {
   display: inline-block;
   width: 1em;
@@ -568,21 +581,14 @@ a.post-link {
   align-items: center;
   justify-content: flex-start;
   padding: 0px 10px; }
+  @media (min-width: 992px) {
+    .header-measure {
+      padding: 0px; } }
 
 header {
   height: 80px;
   background: var(--default-background-color);
   border-bottom: 1px solid lime; }
-  header .logo a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center; }
-  header .logo img {
-    margin-right: 8px;
-    background: var(--default-background-color); }
-  header .logo p {
-    font-size: 1.875em;
-    color: #fff; }
   header nav {
     margin-left: auto; }
     @media (min-width: 768px) {
@@ -706,7 +712,8 @@ section.partners {
 
 .main-measure {
   max-width: 1200px;
-  margin: 0px auto; }
+  margin: 0px auto;
+  padding: 20px 0px; }
 
 section.card-info {
   display: flex;
@@ -913,7 +920,7 @@ section.employee-comment {
       margin-bottom: 10px;
       width: 42px;
       height: 42px;
-      border: 1px solid gray;
+      border: 1px solid #ededed;
       border-radius: 50%;
       background: #fff; }
 
@@ -969,3 +976,30 @@ section.subscribe {
         @media (min-width: 992px) {
           section.subscribe .subscribe-form div button.btn-subscribe {
             padding: 18px 27px; } }
+
+.footer-measure {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 10px 10px; }
+
+footer {
+  height: 110px;
+  margin-top: 40px;
+  background: var(--default-background-color-2); }
+  @media (min-width: 992px) {
+    footer {
+      margin-top: 80px; } }
+  footer .logo p {
+    color: #000; }
+  footer p.copyright {
+    font-size: 0.875em;
+    text-transform: uppercase;
+    color: #000; }
+    @media (min-width: 768px) {
+      footer p.copyright {
+        font-size: 1.125em; } }

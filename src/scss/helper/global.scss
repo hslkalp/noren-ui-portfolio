@@ -6,6 +6,23 @@
 bod {
   background: #fff;
 }
+
+.logo {
+  a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    margin-right: 8px;
+    background: transparent;
+  }
+  p {
+    font-size: 1.875em;
+    color: #fff;
+  }
+}
+
 .icon {
   display: inline-block;
   width: 1em;

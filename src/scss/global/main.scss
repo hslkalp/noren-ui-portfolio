@@ -1,6 +1,7 @@
 .main-measure {
   max-width: 1200px;
   margin: 0px auto;
+  padding: 20px 0px;
 }
 section.card-info {
   display: flex;
@@ -252,7 +253,7 @@ section.employee-comment {
       margin-bottom: 10px;
       width: 42px;
       height: 42px;
-      border: 1px solid gray;
+      border: 1px solid #ededed;
       border-radius: 50%;
       background: #fff;
     }

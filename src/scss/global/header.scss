@@ -8,27 +8,16 @@
   align-items: center;
   justify-content: flex-start;
   padding: 0px 10px; // * desktop ta silinecek
+  @include screen('desktop') {
+    padding: 0px;
+  }
 }
 
 header {
   height: 80px;
   background: var(--default-background-color);
   border-bottom: 1px solid lime;
-  .logo {
-    a {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-    }
-    img {
-      margin-right: 8px;
-      background: var(--default-background-color);
-    }
-    p {
-      font-size: 1.875em;
-      color: #fff;
-    }
-  }
+
   nav {
     button.mobile-menu-btn {
       @include screen('tablet') {

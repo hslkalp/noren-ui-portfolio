@@ -1,0 +1,32 @@
+.footer-measure {
+  max-width: 1200px;
+  margin: 0px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 10px 10px;
+}
+
+footer {
+  height: 110px;
+  margin-top: 40px;
+  background: var(--default-background-color-2);
+  @include screen('desktop') {
+    margin-top: 80px;
+  }
+  .logo {
+    p {
+      color: #000;
+    }
+  }
+  p.copyright {
+    font-size: 0.875em;
+    text-transform: uppercase;
+    color: #000;
+    @include screen('tablet') {
+      font-size: 1.125em;
+    }
+  }
+}
